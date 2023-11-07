@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+
+:root{
+
+    --color-purple-50: #4d0491 ;
+    --color-purple-100: #7e33b7 ;
+    --color-purple-200: #a167c9 ;
+
+
+
+
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50 ), var(--color-purple-100 ), var(--color-purple-200 ));
+}
+
+*{
+    text-decoration: none;
+}
+
+body{
+    background: var(--color-gradient);
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #57449a;
+}
+
+
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 450px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #FFF;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #FFF;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #FFF;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #FFF;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #FFF;
+}
+
+.logo img{
+    margin-right: 550px;
+    width: 220px;
+}
+
+.navbar a{
+    margin: 15px;
+    color: white;
+    font-size: 22px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.grandao{
+    margin-left: 100px;
+}
+
+.texto{
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #fff, #ad5fe1, #9331ee, #5b089a);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: none;
+}
+
+@keyframes degrade {
+    0%{
+        background-position-x:0% ;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+
+.container{
+    float: left;
+    margin: 70px;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.container:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.flip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.frente, .frentedois, .frentetres, .frentequatro, .frentecinco, .frenteseis, .tras{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000001b;
+    backface-visibility: hidden;
+}
+
+.frente{
+    background-image: url(imagens/capinha\ kapa.png);
+    background-size: cover;
+}
+
+.frentedois{
+    background-image: url(imagens/capinha\ akatsu.png);
+    background-size: cover;
+}
+
+.frentetres{
+    background-image: url(imagens/capinha\ foto.png);
+    background-size: cover;
+}
+
+.frentequatro{
+    background-image: url(imagens/segurador\ preto.png);
+    background-size: cover;
+}
+
+.frentecinco{
+    background-image: url(imagens/alexa.png);
+    background-size: cover;
+}
+
+.frenteseis{
+    background-image: url(imagens/tripé.png);
+    background-size: cover;
+}
+
+.tras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #a167c9;
+    transform: rotateY(180deg);
+}
+
+.footer-content{
+    height: 100px;
+    background-color: #57449a;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+   .navbar a {
+    color: black;
+   }
+
+   footer .footer-content{
+    color: red;
+   }
+
+   #rodape {
+    color: blue;
+   }
+}
