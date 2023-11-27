@@ -172,7 +172,68 @@ ul {
     width: 50px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 376px) {
+    body{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
 
-   
+    #buscar{
+        width: 40px;
+        display: flex;
+        
+        align-items: center;
+    }
+
+    .voltar img{
+        width: 50px;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .logo img{
+        width: 200px;
+        text-align: center;
+    }
+
+    #header, #main{
+        margin: 0px;
+    }
+
+    #buscar-input{
+        width: 190px;
+    }
+    
+    .container{
+        display: block;
+    }
+
+    #carrinho-icon img{
+        width: 35px;
+        margin-left: 20px;
+    }
+
+    #buscar{
+        display: flex;
+    }
+
+    .produto-linha{   
+        flex-direction: column;
+    }
+
+    .produto{
+        margin: 70px;
+    }
+
+    .produtos{
+        margin-left: 15px;
+    }
+    #carrinho-itens{
+      left: 0;
+      top: 225px;
+    }
 }
