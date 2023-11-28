@@ -13,3 +13,19 @@ mode.addEventListener('click', () => {
     mode.classList.remove('fa-sun');
     form.classList.remove('dark');
 });
+
+let popupVisivel = false;
+
+function abrirMenu() {
+    const popupElement = document.getElementById('popup');
+  
+    popupVisivel = !popupVisivel;
+    popupElement.classList.toggle('show', popupVisivel);
+  }
+
+// function abrirMenu() {
+  
+//     const popup = document.getElementById('popup');
+//     popup.style.display = 'none'
+    
+//   }

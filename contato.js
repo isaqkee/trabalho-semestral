@@ -63,3 +63,12 @@ class FormSubmit {
     error: "<h1 class='error'>Não foi possível enviar sua mensagem.</h1>",
   });
   formSubmit.init();
+
+  let popupVisivel = false;
+
+function abrirMenu() {
+    const popupElement = document.getElementById('popup');
+  
+    popupVisivel = !popupVisivel;
+    popupElement.classList.toggle('show', popupVisivel);
+  }

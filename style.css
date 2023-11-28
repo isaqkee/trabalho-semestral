@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
+@font-face {
+    font-family: 'isaquefonte';
+    src: url(fontes/Kanit-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url(fontes/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'header';
+    src: url(fontes/Kanit-ExtraLight.ttf);
+}
 
 :root {
 
@@ -19,7 +32,6 @@
 
 body {
     background: var(--color-gradient);
-    font-family: 'Kanit', sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
@@ -31,7 +43,7 @@ header {
     padding: 0;
     border: 0;
     width: 100%;
-    height: 180px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,13 +157,13 @@ header {
 
 .logo img {
     margin-right: 550px;
-    width: 220px;
+    width: 178px;
 }
 
 .navbar a {
     margin: 15px;
     color: white;
-    font-size: 22px;
+    font-size: 19px;
 }
 
 .main {
@@ -164,6 +176,7 @@ header {
 }
 
 .texto {
+    font-family: 'isaquefonte';
     text-align: center;
     font-size: 60px;
     text-transform: uppercase;
@@ -269,6 +282,17 @@ header {
     text-align: center;
 }
 
+.navbar-mobile{
+    display: none;
+}
+
+.logo i{
+    display: none;
+}
+
+#rodape{
+    font-family: 'header';
+}
 
 @media screen and (max-width: 376px) {
     body{
@@ -279,17 +303,38 @@ header {
     .header {
         width: 100vw;
         display: flex;
-        flex-direction: column;
+       
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .logo i{
+        display: flex;
+        padding: 0 0  0 77px;
+
     }
 
     .logo img{
         margin-right: 0;
-        width: 150px;
+        width: 90px;
+          margin-right: 55px;
     }
 
     .navbar a{
-        font-size: 13px;
+        display: none;
+      
         margin: 0 2px;
+    }
+
+    .navbar-mobile{
+        display: grid;
+          font-size: 13px;
+          position: absolute;
+
     }
 
     .texto{
@@ -345,4 +390,25 @@ header {
         height: 190px;
         padding: 0 20px;
     }
+    #popup {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        background: white;
+        position: absolute;
+        top: 44px;
+        right: 10px;
+        box-shadow: 5px 5px 5px #5b089a7a;
+        padding: 14px;
+        font-family: 'regular';
+      }
+      
+      #popup.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    
+    
 }

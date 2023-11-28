@@ -22,6 +22,18 @@
     box-sizing: border-box;
 }
 
+header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #57449a;
+}
+
 body{
     background: var(--color-gradient);
 }
@@ -46,10 +58,24 @@ img{
     margin: 0 128px;
 }
 
+
 #carrinho-icon {
     cursor: pointer;
     display: flex;
     align-items: baseline;
+    margin: 0;
+}
+
+#buscar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#buscar img{
+    display: flex;
+   
 }
 
 .produto-linha {
@@ -124,6 +150,7 @@ input {
     border-radius: 15px ;
     padding: 8px 15px;
     transition: ease-in-out 0.5s;
+    margin: 0 50px 0 20px;
 }
 
 #buscar button:hover{
@@ -174,6 +201,8 @@ ul {
 
 @media screen and (max-width: 376px) {
     body{
+        width: 100vw;
+        overflow-x: hidden;
         margin: 0;
         padding: 0;
         border: 0;
@@ -187,17 +216,32 @@ ul {
         align-items: center;
     }
 
+    #buscar button{
+        margin: 0;
+    }
+
     .voltar img{
         width: 50px;
     }
 
     .logo{
+        display: flex;
+        align-items: center;
         text-align: center;
+    }
+
+    .logo i{
+        display: flex;
+        padding: 0 0  0 77px;
+
     }
 
     .logo img{
         width: 200px;
         text-align: center;
+        margin-right: 0;
+        width: 90px;
+          margin-right: 55px;
     }
 
     #header, #main{
@@ -208,9 +252,7 @@ ul {
         width: 190px;
     }
     
-    .container{
-        display: block;
-    }
+   
 
     #carrinho-icon img{
         width: 35px;
@@ -219,6 +261,7 @@ ul {
 
     #buscar{
         display: flex;
+        margin-top: 10px;
     }
 
     .produto-linha{   
@@ -234,6 +277,40 @@ ul {
     }
     #carrinho-itens{
       left: 0;
-      top: 225px;
+      top: 110px;
+    }
+
+    #popup {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        background: white;
+        position: absolute;
+        top: 44px;
+        right: 10px;
+        box-shadow: 5px 5px 5px #5b089a7a;
+        padding: 14px;
+        font-family: 'regular';
+      }
+      
+      #popup.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .navbar-mobile{
+        display: grid;
+          font-size: 13px;
+          position: absolute;
+    }
+
+    .navbar a{
+        display: none;
+    }
+
+    .footer-content{
+        height: 140px;
     }
 }

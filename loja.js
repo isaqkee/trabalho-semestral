@@ -95,3 +95,11 @@ for(let i = 0; i < produto.length; i++){
         produto[i].style.display = "none"
     }
 }}
+let popupVisivel = false;
+
+function abrirMenu() {
+    const popupElement = document.getElementById('popup');
+  
+    popupVisivel = !popupVisivel;
+    popupElement.classList.toggle('show', popupVisivel);
+  }

@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>loja</title>
     <link rel="stylesheet" href="loja.css">
+    
+
+    
 </head>
 <body>
-    <header id="header">
+    <header class="header">
+        <div class="logo">
+            <img src="imagens/logo branca.png" alt="">
+            <i class="fa-solid fa-bars" onclick="abrirMenu()" style="color: #fff;"></i>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Início</a>
+            <a href="loja.html">Produtos</a>
+            <a href="login.html">Login</a>
+            <a href="contato.html">Contato</a>
+        </div>
+
+        <div class="navbar-mobile" id="popup" >
+            <a href="index.html">Início</a>
+            <a href="loja.html">Produtos</a>
+            <a href="login.html">Login</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </header>
+
+    <div id="header">
         <div class="container">
-            <div class="voltar">
-                <a href="index.html"><img src="imagens/seta-removebg-preview.png" alt=""></a>
-            </div>
-            <div class="logo">
-                <img src="imagens/logo branca.png" alt="">
-            </div>
             <div id="buscar">
                 <input type="text" id="buscar-input" placeholder="Pesquisar produto" oninput="buscarProdutos()">
                 <button onclick="buscarSite()">Buscar</button>
@@ -32,7 +50,9 @@
                 <button class="limpa" onclick="limparCarrinho()">Limpar Carrinho</button>
             </div>
         </div>
-    </header>
+    </div>
+        
+    
     <main id="main">
         <div class="container">
             <div class="produtos">

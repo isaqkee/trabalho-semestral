@@ -14,3 +14,12 @@ function nextImage(){
  document.getElementById("radio"+count).checked = true;
 
 }
+
+let popupVisivel = false;
+
+function abrirMenu() {
+    const popupElement = document.getElementById('popup');
+  
+    popupVisivel = !popupVisivel;
+    popupElement.classList.toggle('show', popupVisivel);
+  }

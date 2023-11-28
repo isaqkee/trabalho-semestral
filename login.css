@@ -16,7 +16,7 @@
 }
 
 *{
-    font-family: 'Poppins', sans-serif;
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,6 +41,7 @@
     box-shadow: 5px 8px rgba(0, 0, 0, 0.336);
     height: fit-content;
     animation: dark-to-light 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
 }
 
 #form_header{
@@ -183,4 +184,22 @@
 .voltar img{
     width: 50px;
     margin-bottom: 470px;
+}
+
+@media screen and (max-width: 376px) {
+    #login_form{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;   
+    }
+
+    #name, #email, #password{
+        width: 155px;
+    }
+
+    .voltar img{
+        width: 41px;
+    }
 }
