@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@font-face {
+    font-family: 'isaquefonte';
+    src: url(fontes/Kanit-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url(fontes/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'header';
+    src: url(fontes/Kanit-ExtraLight.ttf);
+}
 
 :root{
     --color-light-50: #f8fafc ;
@@ -27,11 +40,11 @@ header {
     padding: 0;
     border: 0;
     width: 100%;
-
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: #57449a;
+
 }
 
 body{
@@ -41,6 +54,18 @@ body{
 img{
     width: 100%;
     height: auto;
+}
+
+.logo i{
+    display: none;
+}
+
+.navbar a {
+    margin: 15px;
+    color: white;
+    font-size: 19px;    
+    font-family: 'isaquefonte';
+    text-decoration: none;
 }
 
 /* HEADER */
@@ -57,6 +82,7 @@ img{
 #header, #main {
     margin: 0 128px;
 }
+
 
 
 #carrinho-icon {
@@ -126,6 +152,10 @@ img{
     transition: ease-in-out 0.5s;
 }
 
+.navbar-mobile{
+display: none;
+}
+
 .produto button:hover{
     background-color: white;
     color: #4d0491;
@@ -169,7 +199,7 @@ ul {
     position: absolute;
     left: 80%;
     text-align: center;
-    top: 10%;
+    
     background-color: #4d0491;
     border-radius: 5px;
     color: white;
@@ -194,6 +224,7 @@ ul {
     border: none;
     border-radius: 3px;
 }
+
 
 .voltar{
     width: 50px;
@@ -232,6 +263,7 @@ ul {
 
     .logo i{
         display: flex;
+
         padding: 0 0  0 77px;
 
     }
@@ -312,5 +344,23 @@ ul {
 
     .footer-content{
         height: 140px;
+    }
+
+    .fa-solid fa-bars{
+        display: flex;
+    }
+
+    textarea #mensagem{
+        width: 276px;
+        min-height: 12.5rem;
+    resize: vertical;
+    }
+
+    input, textarea {
+        color: white;
+        background: #323644;
+        border: 0.125rem solid transparent;
+        border-radius: 1.125rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
     }
 }
