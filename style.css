@@ -279,7 +279,7 @@ header {
 }
 
 .footer-content {
-    height: 130px;
+    height: 143px;
     background-color: #57449a;
     color: white;
     text-align: center;
@@ -297,6 +297,12 @@ header {
 
 #rodape{
     font-family: 'header';
+}
+
+h5{
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 @media screen and (max-width: 376px) {
